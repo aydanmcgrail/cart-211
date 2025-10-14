@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a {
+    display : block;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color:black;
+}
+
+nav {
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+    
+    /* je veux le king bag*/
+}
+nav a:hover{color:blue}
+
+header {font-size: 32px; color:rgb(84, 129, 163);}
+
+main {font-size: 28px;}
+
+.wrapper {
+    float: right;
+    width: 80%;}
+
+.bookish {
+    display: grid;
+    grid-template-columns: auto auto auto;}
+
+img{width: 100%;}
+
+@media (max-width: 480px) {
+    nav{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        background-color:black;
+        margin-top: 0;
+        padding-top: 10px;
+        
+    }
+    .bookish {
+    display: grid;
+    grid-template-columns: auto auto;}
+  .wrapper {
+    float: none;
+    width: 90%;
+margin-left: auto;
+margin-right: auto;}
+  
+  
+    h1{color:red;}
+
+    p{color:blue;}
+    nav a{color:bisque;
+    font-size: 20px;}
+}
+
