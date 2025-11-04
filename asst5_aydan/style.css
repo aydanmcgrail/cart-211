@@ -1,0 +1,115 @@
+body {
+  font-family: Arial;
+}
+
+a {
+  justify-content: space-around;
+  font-family: Impact;
+  font-size: 64px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  padding: 25px;
+  color: black;
+  float: right;
+}
+
+nav {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+header {
+  margin-left: 50px;
+  width: 10%;
+}
+
+main {
+  margin-left: 75px;
+  font-size: 42px;
+  height: 200px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-size: 128px;
+  font-weight: bold;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.bookish {
+  display: grid;
+  grid-template-columns: repeat (12, 1fr);
+  max-width: 100%;
+  gap: 14px;
+}
+
+.im1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.im2 {
+  grid-column: 4/7;
+}
+
+.im3 {
+  grid-column: 7/13;
+}
+
+.im4 {
+  grid-column: 7/13;
+}
+
+.im4 {
+  grid-column: 7/13;
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: black;
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  .bookish {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .wrapper {
+    float: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    color: red;
+  }
+
+  p {
+    color: blue;
+  }
+
+  nav a {
+    color: bisque;
+    font-size: 20px;
+  }
+}
+
+footer {
+  bottom: 0;
+}
