@@ -1,0 +1,209 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 HelveticaNeue-Italic;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid2\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 CSS animation:\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b0\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 On the element itself you place the
+\f0\b  transition parameter 
+\f1\b0 \
+#glass \{\
+transition-property: transform;\
+  transition-duration: 3s;\
+  transition-timing-function: ease-in-out;\
+  transition-delay: 1s;\
+\}\
+\
+
+\f0\b Or the shorthand: 
+\f1\b0 transition: transform 3s ease-in-out 1s;\
+\
+On the trigger you place the
+\f0\b  transform parameter\
+ 
+\f1\b0 #glass:hover \{\
+  transform: scale(50%);\
+\}\
+\
+You may also have different property by separating each of them with a coma (,)\
+\
+#glass \{\
+ transition: transform 0.5s ease-in-out 1s, filter 0.5s ease 0.7s;\
+\}\
+\
+#glass:hover \{\
+ transform: scale(200%);\
+ filter: blur(10px);\
+\}\
+\
+
+\f0\b Or using all 
+\f1\b0 if they all have similar values \
+ transition: all 0.5s ease-in-out 1s;\
+\
+\
+You may use 
+\f0\b animation
+\f1\b0  and 
+\f0\b keyframe
+\f1\b0  if you want that to go continuously \
+#glass \{\
+  position: absolute;\
+  top: 45%;                  /* ajustement pour la main */\
+  left: 35%;\
+  width: 6%;\
+  height: auto;\
+  cursor: pointer;\
+  animation: glassDance 2s ease-in-out infinite;\
+\}\
+\
+@keyframes glassDance \{\
+  0%, 100% \{\
+    transform: scale(100%);\
+    filter: blur(0);\
+  \}\
+  50% \{\
+    transform: scale(200%);\
+    filter: blur(10px);\
+  \}\
+\}\
+\
+\
+Try this one and the element will dance:\
+1st, on the element: animation: dance 2s infinite ease-in-out;\
+\
+2nd, on the @keyframe:\
+0% \{\
+    transform: translateX(0) rotate(0deg);\
+  \}\
+  20% \{\
+    transform: translateX(-20px) rotate(-5deg);\
+  \}\
+  40% \{\
+    transform: translateX(20px) rotate(5deg);\
+  \}\
+  60% \{\
+    transform: translateY(-20px) scale(1.05);\
+  \}\
+  80% \{\
+    transform: translateX(-10px) rotate(-3deg);\
+  \}\
+  100% \{\
+    transform: translateX(0) rotate(0deg);\
+  \}\
+\
+Ps: animation will always take over on rollover. So :hover won\'92t work at the same time as animation. But a quick workaround is to paused animation at : hover with simply that :   animation-play-state: paused;   and then have the transformation\
+\
+#mench-all:hover \{\
+  animation-play-state: paused;          \
+  transform: translateX(100px) rotate(180deg);\
+     \
+\}\
+\
+\
+\pard\pardeftab560\sa40\partightenfactor0
+
+\f0\b\fs32 \cf0 Here are the standard ease types available in CSS:\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f2\b0\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f1\fs26 ease: This is the default value. It creates a transition that starts slowly, accelerates in the middle, and then slows down towards the end. It's represented by cubic-bezier(0.25, 0.1, 0.25, 1). \uc0\u8232 \u8232 \
+\ls1\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 linear: This creates a transition with a constant speed from start to finish. It's represented by cubic-bezier(0, 0, 1, 1). \uc0\u8232 \u8232 \
+\ls1\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 ease-in: This creates a transition that starts slowly and then progressively speeds up until the end. It's represented by cubic-bezier(0.42, 0, 1, 1). \uc0\u8232 \u8232 \
+\ls1\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 ease-out: This creates a transition that starts abruptly and then progressively slows down towards the end. It's represented by cubic-bezier(0, 0, 0.58, 1).\'a0\uc0\u8232 \u8232 \u8232 \u8232 \
+\ls1\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 ease-in-out: This creates a transition that starts slowly, speeds up in the middle, and then slows down again towards the end. It's represented by cubic-bezier(0.42, 0, 0.58, 1). \uc0\u8232 \u8232 \
+\ls1\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 cubic-bezier(n, n, n, n): This allows for the creation of a custom easing curve by specifying four numerical values that define the coordinates of two control points for a cubic Bezier curve. The x-coordinates must be within the range [0, 1].\'a0\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl1
+\f2\fs18 \cf0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "https://cubic-bezier.com/"}}{\fldrslt 
+\f1\fs26 https://cubic-bezier.com/}}
+\f1\fs26  to customise the curve or simply inspect.\uc0\u8232 \u8232 \u8232 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f2\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f1\fs26 steps(int, <jumpterm>): This creates a stepped transition, where the animation progresses in a series of discrete jumps rather than a smooth curve. The int value specifies the number of steps, and the optional <jumpterm> (e.g., start, end, jump-start, jump-end, jump-both, jump-none) controls how the steps are performed.\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=xdap5e3-DwM"}}{\fldrslt \cf0 https://www.youtube.com/watch?v=xdap5e3-DwM}}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf0 \
+\
+Types of delay with @animation:\
+\
+
+\f1\b0 animation-delay\
+animation-iteration-count (like 3 or infinite)\
+animation-fill-mode (forwards, backwards, both)\
+	Use 
+\f0\b forwards
+\f1\b0  if you want the element to 
+\f3\i stay
+\f1\i0  in its final position.\
+	Use 
+\f0\b backwards
+\f1\b0  if you want the element to 
+\f3\i start
+\f1\i0  in its animated style even before the animation begins.\
+	Use 
+\f0\b both
+\f1\b0  if you want 
+\f3\i both behaviors
+\f1\i0  \'97 useful for delayed animations that should begin visually right away and remain at their end state.\
+	ex: #box \{\
+  animation: fadeIn 2s ease-in-out 1 forwards;\
+\}\
+@keyframes fadeIn \{\
+  from \{ opacity: 0; \}\
+  to \{ opacity: 1; \}\
+\}\
+After finishing, opacity stays at 1.\
+\
+animation-direction (normal, reverse, alternate, etc.)\
+\
+	Alternates direction each cycle:\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f2\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f1\fs26 first run \uc0\u8594  forward (0% \u8594  100%)\
+\ls2\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 second run \uc0\u8594  backward (100% \u8594  0%)\
+\ls2\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 third run \uc0\u8594  forward again, etc.\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0  Ex: #glass \{\
+  animation: glassDance 2s ease-in-out 1s 3 alternate;\
+\}\
+@keyframes glassDance \{\
+  0%   \{ transform: scale(100%); filter: blur(0); \}\
+  100% \{ transform: scale(200%); filter: blur(10px); \}\
+\}\
+\
+\
+ }

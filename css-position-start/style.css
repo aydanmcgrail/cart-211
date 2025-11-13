@@ -1,0 +1,64 @@
+body {
+  /* fixed background */
+  background-image: url("mench-bkg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* fill entire viewport */
+  background-position: center;
+  background-attachment: fixed; /* stays still when scrolling */
+  margin: 0;
+  height: 100vh;
+}
+
+/* container for character + glass */
+#mench-all {
+  position: relative;
+  left: 20%;
+  animation: dance 2s infinite ease-in-out;
+}
+
+/* character */
+#mench-zi {
+  width: 60vw; /* scales with screen */
+  height: auto;
+  min-width: 800px;
+}
+
+/* glass fixed to hand */
+#glass {
+  position: absolute;
+  top: 45%; /* ajustement pour la main */
+  left: 35%;
+  width: 6%;
+  height: auto;
+  cursor: pointer;
+}
+
+.sun1 {
+  display: block;
+  filter: hue-rotate(200deg); /*blur*/
+  margin-left: 500px;
+  margin-bottom: 300px;
+  background-color: blue;
+}
+.sun2 {
+  display: block;
+  filter: hue-rotate(90deg);
+  margin: 25px 40px 300px 400px; /*goes clockwise*/
+  position: fixed;
+  left: 50px;
+  top: 0px;
+  z-index: 999;
+}
+
+.sun3 {
+  display: block;
+  filter: hue-rotate(-90deg);
+  margin: 0 auto; /*0= top/bottom auto=left/right*/
+}
+
+.sun4 {
+  display: block;
+  position: absolute;
+  top: 500px;
+  right: 30px;
+}

@@ -1,0 +1,65 @@
+body {
+  /* fixed background */
+  background-image: url("mench-bkg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* fill entire viewport */
+  background-position: center;
+  background-attachment: fixed; /* stays still when scrolling */
+  margin: 0;
+  height: 100vh;
+  display: flex; /* centers the character block */
+  justify-content: center;
+  align-items: center;
+}
+
+/* container for character + glass */
+#mench-all {
+  position: relative;
+  left: 20%;
+  animation: dance 2s infinite ease-in-out; /*backwards*/
+}
+
+@keyframes dance {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-20px) rotate(-5deg);
+  }
+  60% {
+    transform: translateX(20px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* character */
+#mench-zi {
+  width: 60vw; /* scales with screen */
+  height: auto;
+  min-width: 800px;
+}
+
+/* glass fixed to hand */
+#glass {
+  position: absolute;
+  top: 45%; /* adjust for perfect hand alignment */
+  left: 35%;
+  width: 6%; /* scales with the character */
+  height: auto;
+  cursor: pointer;
+  transition-property: scale();
+  transition-duration: 3s;
+  /*transition-delay: 1s;*/
+  transition-timing-function: cubic-bezier(
+    0.075,
+    0.82,
+    0.165,
+    1
+  ); /*ease-in-out*/
+}
+
+#glass:hover {
+  transform: scale(250%);
+}
