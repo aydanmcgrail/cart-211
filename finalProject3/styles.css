@@ -553,9 +553,10 @@ main {
 /* MODAL */
 .meme-modal {
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 9999;
-  padding-top: 60px;
+  padding-top: 260px;
+  margin-top: 400px;
   left: 0;
   top: 0;
   width: 100%;
@@ -574,7 +575,7 @@ main {
 
 .meme-close {
   position: absolute;
-  top: 20px;
+
   right: 40px;
   color: white;
   font-size: 40px;
