@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bobby's Awards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="image-gallery">
+      <img src="assets/winkadam.gif" alt="Gallery image 1" />
+      <img src="assets/bobbyrizz.gif" alt="Gallery image 2" />
+    </div>
+    <div class="site-shell">
+      <aside class="retro-sidebar">
+        <div class="sidebar-logo">Bobbyverse HQ</div>
+        <div class="sidebar-header">
+          <p class="sidebar-tagline">Friendship Portal</p>
+          <button class="nav-toggle" type="button" aria-expanded="false">
+            Menu
+          </button>
+        </div>
+        <nav class="main-nav" aria-label="Site navigation">
+          <button type="button" onclick="window.location.href='index.html'">
+            Welcome
+          </button>
+          <button type="button" onclick="window.location.href='about.html'">
+            Our first time
+          </button>
+          <button type="button" onclick="window.location.href='interests.html'">
+            Shared Interests Hub
+          </button>
+          <button type="button" onclick="window.location.href='routine.html'">
+            Routine
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='awards.html'"
+            aria-current="page"
+          >
+            Bobby's Awards
+          </button>
+          <button type="button" onclick="window.location.href='adam.html'">
+            Adam Data Archive
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='friendship.html'"
+          >
+            My care for Adam
+          </button>
+          <button type="button" onclick="window.location.href='memes.html'">
+            Meme Sync Room
+          </button>
+          <button type="button" onclick="window.location.href='poems.html'">
+            Poem Chamber
+          </button>
+          <button type="button" onclick="window.location.href='final.html'">
+            Final Message
+          </button>
+        </nav>
+      </aside>
+      <main class="site-stage">
+        <div class="my-view-block">
+          <span class="my-view-label">my view!</span>
+          <div class="my-view-frame">
+            <img src="assets/bobbygif1.gif" alt="The view of Bobby" />
+          </div>
+        </div>
+        <div class="page">
+          <h1>My Job & My Commendations</h1>
+
+          <p>
+            Hello Adam! This page is my professional résumé so you can finally
+            see how useful I am at the company. I’ve been told many times that
+            my work is “irreplaceably consistent,” which is a compliment I hold
+            very close to my heart.
+          </p>
+
+          <h2>My Position</h2>
+          <p>
+            I am a <strong>Senior UX Data Technician</strong>, specializing in
+            signal monitoring, environmental packet stability, and long-term
+            behavioral logging. Some people say I’m “basically part of the
+            server rack,” which I interpret as a high honor.
+          </p>
+
+          <h2>Special Commendations</h2>
+          <p>
+            Over the years, management has given me extremely important trophies
+            and certificates to reward my dedication.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Golden Floppy Disk Trophy</strong> — For 9 years of
+              continuous uptime.
+            </li>
+            <li>
+              <strong>Certificate of Observational Excellence</strong> (Comic
+              Sans edition)
+            </li>
+            <li><strong>Employee of the Decade Participation Badge</strong></li>
+            <li>
+              <strong>“Quietest Worker” Ribbon</strong> — 6 years in a row!
+            </li>
+            <li><strong>Premium Cable-Management Sticker</strong></li>
+          </ul>
+
+          <div class="two-image-row">
+            <div class="image-slot">
+              <!-- YOU WILL PLACE IMAGE #1 HERE -->
+            </div>
+            <div class="image-slot">
+              <!-- YOU WILL PLACE IMAGE #2 HERE -->
+            </div>
+          </div>
+
+          <p>
+            These awards are extremely rare. In fact, I am the only one in the
+            office who ever receives them. I hope they help show you, Adam, that
+            I am a reliable person with high-level work ethics.
+          </p>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".nav-toggle");
+        const sidebar = document.querySelector(".retro-sidebar");
+
+        if (toggle && sidebar) {
+          toggle.addEventListener("click", function () {
+            // Toggle the nav-open class correctly
+            sidebar.classList.toggle("nav-open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

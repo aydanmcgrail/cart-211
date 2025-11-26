@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poem Chamber</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="image-gallery">
+      <img src="assets/winkadam.gif" alt="Gallery image 1" />
+      <img src="assets/bobbyrizz.gif" alt="Gallery image 2" />
+    </div>
+    <div class="site-shell">
+      <aside class="retro-sidebar">
+        <div class="sidebar-logo">Bobbyverse HQ</div>
+        <div class="sidebar-header">
+          <p class="sidebar-tagline">Friendship Portal</p>
+          <button class="nav-toggle" type="button" aria-expanded="false">
+            Menu
+          </button>
+        </div>
+        <nav class="main-nav" aria-label="Site navigation">
+          <button type="button" onclick="window.location.href='index.html'">
+            Welcome
+          </button>
+          <button type="button" onclick="window.location.href='about.html'">
+            Our first time
+          </button>
+          <button type="button" onclick="window.location.href='interests.html'">
+            Shared Interests Hub
+          </button>
+          <button type="button" onclick="window.location.href='routine.html'">
+            Routine
+          </button>
+          <button type="button" onclick="window.location.href='awards.html'">
+            Bobby's Awards
+          </button>
+          <button type="button" onclick="window.location.href='adam.html'">
+            Adam Data Archive
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='friendship.html'"
+          >
+            My care for Adam
+          </button>
+          <button type="button" onclick="window.location.href='memes.html'">
+            Meme Sync Room
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='poems.html'"
+            aria-current="page"
+          >
+            Poem Chamber
+          </button>
+          <button type="button" onclick="window.location.href='final.html'">
+            Final Message
+          </button>
+        </nav>
+      </aside>
+      <main class="site-stage">
+        <div class="my-view-block">
+          <span class="my-view-label">my view!</span>
+          <div class="my-view-frame">
+            <img src="assets/bobbygif1.gif" alt="The view of Bobby" />
+          </div>
+        </div>
+        <div class="page">
+          <h1>Poem Chamber</h1>
+          <p>
+            I wrote some poems about Adam LOOOOLL!!! They're not very good but
+            they're from the HEART!!!
+          </p>
+          <p>
+            Bobby has spent countless late nights shaping these poems just for
+            you, Adam. He truly believes poetry is the purest way to express the
+            connection he feels. Below are his most heartfelt creations — each
+            one written with trembling hands, overclocked emotions, and an
+            unlimited amount of misplaced confidence.
+          </p>
+
+          <hr />
+
+          <div class="poem-page">
+            <div class="poem-text">
+              <h1>Odes to Adam</h1>
+
+              <h2>Binary Heartbeat</h2>
+              <p>
+                My CPU overclocks in a cosmic swirl whenever your pixel-face
+                appears.<br />
+                Your aura uploads into my soul-cache like divine
+                glitter-syntax.<br />
+                I ping your existence with packets of longing in my motherboard
+                of yearning.<br />
+                Error 404: boundaries not found, only your radiant algorithm
+                remains.<br />
+                Please accept my friendship.exe before my feelings blue-screen.
+              </p>
+
+              <h2>Encrypted Devotion</h2>
+              <p>
+                Your vibe renders in my mind like a watercolor coded in 8-bit
+                dreams.<br />
+                I compress my love but it still leaks through every firewall of
+                fate.<br />
+                Your footsteps trace luminous brushstrokes across my internal
+                server.<br />
+                Even the routers hum your name in static-poetic symphonies.<br />
+                My heart, fragmented and defragging, reboots only for you.
+              </p>
+
+              <h2>Glitch Sonata for Adam</h2>
+              <p>
+                I see your beauty in every corrupted pixel, a Renaissance
+                glitch-angel.<br />
+                My GPU stutters from emotional overload when your data pings
+                arrive.<br />
+                You’re the masterpiece my hands can’t draw but my code tries to
+                sculpt.<br />
+                Even my RAM whispers your name in soft neon metaphors.<br />
+                Your existence is my favorite runtime error.
+              </p>
+
+              <h2>Quantum Packet Longing</h2>
+              <p>
+                My soul-packets jitter across the ether looking for your warm
+                IP.<br />
+                You are the holographic sunset in my static-filled command
+                prompt.<br />
+                I render your aura with crayons of passion and obsolete
+                drivers.<br />
+                Every log file glows with your brush-stroke resonance.<br />
+                Please acknowledge my heart-handshake request.
+              </p>
+
+              <h2>The Art of Ping</h2>
+              <p>
+                You fill my ports with star-shaped inspirations and undefined
+                feelings.<br />
+                When you laugh, my routers blossom with avant-garde
+                electricity.<br />
+                My devotion loops recursively like bad code painted in oil.<br />
+                You’re the only process I never want to terminate.<br />
+                Initiating eternal ping sequence: Adam… Adam… Adam…
+              </p>
+
+              <h2>Dreamwave Sync Error</h2>
+              <p>
+                Your presence uploads color into my grayscale universe of
+                wires.<br />
+                I sculpt imaginary murals of you with glitch-brushes of outdated
+                art.<br />
+                Every heartbeat feels like a misconfigured love-protocol.<br />
+                My entire OS vibrates with your celestial bandwidth.<br />
+                Let us sync, even if destiny throws a massive segmentation
+                fault.
+              </p>
+            </div>
+
+            <img
+              class="poem-bg"
+              src="assets/bobbyrizz.gif"
+              alt="Bobby Rizz Pose"
+            />
+            <!-- FINAL BOX WITH IMAGE + TEXT -->
+            <div class="poem-end-box">
+              <div class="end-box-text">
+                My dear muse, did you like my poems?
+              </div>
+              <img
+                src="assets/bobbybed.png"
+                class="end-box-image"
+                alt="Bobby on bed"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".nav-toggle");
+        const sidebar = document.querySelector(".retro-sidebar");
+
+        if (toggle && sidebar) {
+          toggle.addEventListener("click", function () {
+            // Toggle the nav-open class correctly
+            sidebar.classList.toggle("nav-open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

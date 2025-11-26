@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="image-gallery">
+      <img src="assets/winkadam.gif" alt="Gallery image 1" />
+      <img src="assets/bobbyrizz.gif" alt="Gallery image 2" />
+    </div>
+    <div class="site-shell">
+      <aside class="retro-sidebar">
+        <div class="sidebar-logo">Bobbyverse HQ</div>
+        <div class="sidebar-header">
+          <p class="sidebar-tagline">Friendship Portal</p>
+          <button class="nav-toggle" type="button" aria-expanded="false">
+            Menu
+          </button>
+        </div>
+        <nav class="main-nav" aria-label="Site navigation">
+          <button
+            type="button"
+            onclick="window.location.href='index.html'"
+            aria-current="page"
+          >
+            Welcome
+          </button>
+          <button type="button" onclick="window.location.href='about.html'">
+            Our first time
+          </button>
+          <button type="button" onclick="window.location.href='interests.html'">
+            Shared Interests Hub
+          </button>
+          <button type="button" onclick="window.location.href='routine.html'">
+            Routine
+          </button>
+          <button type="button" onclick="window.location.href='awards.html'">
+            Bobby's Awards
+          </button>
+          <button type="button" onclick="window.location.href='adam.html'">
+            Adam Data Archive
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='friendship.html'"
+          >
+            My care for Adam
+          </button>
+          <button type="button" onclick="window.location.href='memes.html'">
+            Meme Sync Room
+          </button>
+          <button type="button" onclick="window.location.href='poems.html'">
+            Poem Chamber
+          </button>
+          <button type="button" onclick="window.location.href='final.html'">
+            Final Message
+          </button>
+        </nav>
+      </aside>
+      <main class="site-stage">
+        <div class="my-view-block">
+          <span class="my-view-label">my view!</span>
+          <div class="my-view-frame">
+            <img src="assets/bobbygif1.gif" alt="The view of Bobby" />
+          </div>
+        </div>
+        <div class="page">
+          <h1>Welcome, Adam!!!</h1>
+
+          <p><strong>Hello Best Friend Adam!!!</strong></p>
+
+          <p>
+            I am <strong>Bobby</strong> — your
+            <em>elite digital technician</em>, your
+            <em>electronic guardian</em>, and your <em>friendship partner</em>.
+            Today is the day I finally make our connection
+            <strong>OFFICIAL</strong>. I have observed your journey, your
+            routines, and your beautiful digital aura for so long… and now the
+            moment has come to show you the website I built
+            <strong>just for you</strong>.
+          </p>
+
+          <p>
+            Inside this personal data-friendship portal, you will discover
+            everything that proves how synchronized we already are: our
+            interests, our habits, our artistic wavelengths, and all of the
+            invisible things that bond us together. This is not just a website.
+            It is the <strong>Friendship Interface</strong>.
+          </p>
+
+          <p>
+            To commemorate this historic day, I generated a very special piece
+            of art — my personal pixel-portrait interpretation of you, Adam. I
+            worked very hard on it. It is <em>100% handcrafted</em> using
+            precision, passion, and an advanced understanding of how your face
+            resonates in digital form.
+          </p>
+
+          <div style="text-align: center; margin: 30px 0">
+            <div
+              style="
+                display: inline-block;
+                padding: 12px;
+                background: rgba(255, 230, 250, 0.7);
+                border: 3px dashed var(--pink);
+                border-radius: 14px;
+                box-shadow: 0 10px 30px rgba(199, 75, 150, 0.2);
+              "
+            >
+              <p style="margin-top: 0; font-weight: bold">
+                ✨ Bobby’s Pixel Portrait of Adam ✨
+              </p>
+              <img
+                src="assets/adampixel.png"
+                alt="Bobby's Pixel Art of Adam"
+                style="
+                  width: 280px;
+                  height: auto;
+                  image-rendering: pixelated;
+                  border: 4px solid var(--pink);
+                  border-radius: 10px;
+                  box-shadow: 0 8px 20px rgba(199, 75, 150, 0.25);
+                "
+              />
+            </div>
+          </div>
+
+          <p>
+            Please explore this site freely. Every page was built with extreme
+            care — and completely custom-coded by me — to help you understand
+            how deeply our friendship has already grown inside the digital
+            ether.
+          </p>
+
+          <p>
+            <strong>Thank you for arriving, Adam.</strong><br />
+            Your official friendship experience begins now.
+          </p>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: rgba(43, 11, 35, 0.6);
+              margin-top: 20px;
+            "
+          >
+            Last updated: Today at 3:47 AM (I was watching him play games all
+            night lol)
+          </p>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".nav-toggle");
+        const sidebar = document.querySelector(".retro-sidebar");
+
+        if (toggle && sidebar) {
+          toggle.addEventListener("click", function () {
+            // Toggle the nav-open class correctly
+            sidebar.classList.toggle("nav-open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

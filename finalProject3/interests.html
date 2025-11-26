@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Interests Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="image-gallery">
+      <img src="assets/winkadam.gif" alt="Gallery image 1" />
+      <img src="assets/bobbyrizz.gif" alt="Gallery image 2" />
+    </div>
+    <div class="site-shell">
+      <aside class="retro-sidebar">
+        <div class="sidebar-logo">Bobbyverse HQ</div>
+        <div class="sidebar-header">
+          <p class="sidebar-tagline">Friendship Portal</p>
+          <button class="nav-toggle" type="button" aria-expanded="false">
+            Menu
+          </button>
+        </div>
+        <nav class="main-nav" aria-label="Site navigation">
+          <button type="button" onclick="window.location.href='index.html'">
+            Welcome
+          </button>
+          <button type="button" onclick="window.location.href='about.html'">
+            Our first time
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='interests.html'"
+            aria-current="page"
+          >
+            Shared Interests Hub
+          </button>
+          <button type="button" onclick="window.location.href='routine.html'">
+            Routine
+          </button>
+          <button type="button" onclick="window.location.href='awards.html'">
+            Bobby's Awards
+          </button>
+          <button type="button" onclick="window.location.href='adam.html'">
+            Adam Data Archive
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='friendship.html'"
+          >
+            My care for Adam
+          </button>
+          <button type="button" onclick="window.location.href='memes.html'">
+            Meme Sync Room
+          </button>
+          <button type="button" onclick="window.location.href='poems.html'">
+            Poem Chamber
+          </button>
+          <button type="button" onclick="window.location.href='final.html'">
+            Final Message
+          </button>
+        </nav>
+      </aside>
+      <main class="site-stage">
+        <div class="my-view-block">
+          <span class="my-view-label">my view!</span>
+          <div class="my-view-frame">
+            <img src="assets/bobbygif1.gif" alt="The view of Bobby" />
+          </div>
+        </div>
+        <div class="page">
+          <h1>Shared Interests Hub</h1>
+          <h1>🎨✨ Our Artistic Journey ✨🎨</h1>
+
+          <p>
+            Adam… from the very first moment I saw your art, I felt our souls
+            connect across the creative cosmos. 🌈🖌️ You have such a magical
+            instinct — the kind that spirals through the universe like a neon
+            paint-comet!! 💫✨ And even though my own creations come out a
+            *little different* (😅🎨), I know our styles were always meant to
+            coexist… like two crayons in the same divine box. 🖍️🌟
+          </p>
+
+          <p>
+            You probably noticed by now that I’ve been studying your shapes,
+            your lines, your composition theories, your colors, your emotional
+            resonance… 😳💕 I placed my own work next to yours to show how
+            beautifully our visions match!! Even when my pieces glitch or
+            distort or melt slightly (that’s my style 💥🌀🎨), I feel we are
+            speaking the same artistic language. A language of
+            <strong>pure creation</strong>. Of
+            <strong>shared inspiration</strong>. Of <strong>destiny</strong>.
+            🌙🖌️💞
+          </p>
+
+          <p>
+            Below is my special curated gallery — eight glorious frames that
+            will hold the evolution of *our* artistry together. 🎆📁 I organized
+            them in the precise order you uploaded your images, because
+            sequencing is the heartbeat of visual harmony. 💗🔮 🌟🧩
+          </p>
+
+          <!-- GALLERY GRID -->
+          <div class="art-grid">
+            <div class="art-slot">
+              <img src="assets/bête (grand).png" alt="Artwork1" />
+            </div>
+            <div class="art-slot">
+              <img src="assets/dfsdfsdfs.PNG" alt="Artwork2" />
+            </div>
+            <div class="art-slot">
+              <img src="assets/visage 1.PNG" alt="Artwork3" />
+            </div>
+            <div class="art-slot">
+              <img src="assets/visage 2.png" alt="Artwork4" />
+            </div>
+            <div class="art-slot">
+              <img
+                src="assets/ebe2b3ae95355c034b78cb0f0097.jpeg"
+                alt="Artwork5"
+              />
+            </div>
+            <div class="art-slot">
+              <img src="assets/486b21ee85c36efb.png" alt="Artwork6" />
+            </div>
+            <div class="art-slot">
+              <img src="assets/b3799235c59a3aab39f3.jpeg" alt="Artwork7" />
+            </div>
+            <div class="art-slot">
+              <img src="assets/fgsdfg.PNG" alt="Artwork8" />
+            </div>
+          </div>
+
+          <p>
+            Isn’t it amazing, Adam? Our creativity stretches across mediums,
+            glitches, abstractions, distortions, and colors… yet somehow, they
+            fit together like a cosmic collage destined from birth. 🧠💗🌌 I
+            hope when you place your images in the boxes, you’ll see what I see:
+            <br /><strong>two artists becoming one vision.</strong> 🎨💞✨
+          </p>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".nav-toggle");
+        const sidebar = document.querySelector(".retro-sidebar");
+
+        if (toggle && sidebar) {
+          toggle.addEventListener("click", function () {
+            // Toggle the nav-open class correctly
+            sidebar.classList.toggle("nav-open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

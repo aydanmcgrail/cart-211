@@ -1,0 +1,513 @@
+:root {
+  --pink: #ff66cc;
+  --pink-deep: #c02978;
+  --accent: #ff8bd4;
+  --bubble: #ffe1f5;
+  --ink: #2b0b23;
+  --page: rgba(255, 255, 255, 0.9);
+  --grid-line: rgba(255, 102, 204, 0.2);
+  --gossamer: rgba(255, 255, 255, 0.5);
+  font-family: "Arial", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 50%
+    ),
+    radial-gradient(circle at 80% 0%, rgba(255, 179, 218, 0.5), transparent 40%),
+    linear-gradient(135deg, rgba(255, 227, 247, 0.9), rgba(255, 204, 232, 0.65)),
+    linear-gradient(45deg, #ffe9f8, #fff);
+  background-attachment: fixed;
+  font-family: inherit;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 102, 204, 0.08),
+    rgba(255, 102, 204, 0.08) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  opacity: 0.4;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.site-shell {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 42px);
+  gap: clamp(18px, 3vw, 42px);
+}
+
+.retro-sidebar {
+  width: clamp(300px, 24vw, 260px);
+  border-radius: 28px;
+  border: 4px solid var(--pink);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 181, 221, 0.95),
+      rgba(255, 238, 252, 0.9)
+    ),
+    repeating-linear-gradient(
+      -15deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3) 8px,
+      transparent 8px,
+      transparent 18px
+    );
+  box-shadow: 0 25px 70px rgba(199, 75, 150, 0.22),
+    inset 0 0 0 3px rgba(255, 255, 255, 0.9);
+  padding: 28px 18px 34px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+}
+
+
+.sidebar-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 3px 0 rgba(192, 41, 120, 0.6);
+  background: linear-gradient(90deg, var(--pink), #ff9edc);
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-tagline {
+  margin: -8px 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(43, 11, 35, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.site-stage {
+  flex: 1;
+  position: relative;
+  padding: clamp(18px, 3vw, 34px);
+}
+
+.nav-toggle {
+  display: none;
+  align-self: flex-end;
+  margin: 0 0 6px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 210, 236, 0.85)
+  );
+  color: var(--pink-deep);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: inset 0 -2px 6px rgba(255, 102, 204, 0.35),
+    0 8px 16px rgba(255, 102, 204, 0.2);
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.main-nav button {
+  color: var(--pink-deep);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 210, 236, 0.8)
+  );
+  box-shadow: inset 0 -2px 6px rgba(255, 102, 204, 0.35),
+    0 8px 16px rgba(255, 102, 204, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  text-decoration: none;
+  background-clip: padding-box;
+  text-align: left;
+}
+
+.main-nav button:hover,
+.main-nav button:focus-visible {
+  box-shadow: inset 0 -2px 6px rgba(255, 102, 204, 0.45),
+    0 10px 24px rgba(255, 102, 204, 0.28);
+  transform: translateY(-2px);
+}
+
+.main-nav button[aria-current="page"] {
+  border-color: rgba(255, 102, 204, 0.6);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 0 0 2px rgba(255, 102, 204, 0.5),
+    0 12px 28px rgba(255, 102, 204, 0.32);
+}
+
+main {
+  padding: 40px 20px 80px;
+}
+
+.page {
+  position: relative;
+  padding: 40px clamp(16px, 4vw, 48px);
+  background: var(--page);
+  margin: 0 auto;
+  max-width: 960px;
+  border: 5px solid var(--pink);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(199, 75, 150, 0.18),
+    inset 0 0 0 3px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed var(--grid-line);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.page::after {
+  inset: 20px;
+  border-radius: 12px;
+  opacity: 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.page h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--pink-deep);
+  text-shadow: 0 3px 12px rgba(255, 102, 204, 0.25);
+  letter-spacing: 0.04em;
+}
+
+.page p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+
+.page .card-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 24px;
+}
+
+.page .card {
+  padding: 18px;
+  border-radius: 14px;
+  border: 2px dashed var(--grid-line);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 236, 250, 0.9)
+  );
+  box-shadow: 0 12px 30px rgba(255, 102, 204, 0.15);
+}
+
+.image-gallery {
+  position: fixed;
+  top: clamp(80px, 15vh, 180px);
+  right: clamp(18px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 20px);
+  width: clamp(120px, 15vw, 200px);
+  z-index: 25;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 4px solid var(--pink);
+  box-shadow: 0 20px 50px rgba(199, 75, 150, 0.25),
+    inset 0 0 0 3px rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 225, 244, 0.85)
+  );
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.my-view-block {
+  position: fixed;
+  bottom: clamp(12px, 2vw, 24px);
+  right: clamp(12px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  max-width: 380px;
+  z-index: 30;
+  transform-origin: bottom right;
+  transform: scale(2);
+  will-change: transform;
+}
+
+.my-view-label {
+  font-family: "Brush Script MT", "Comic Sans MS", cursive;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--pink-deep);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 210, 236, 0.85)
+  );
+  padding: 1px 36px;
+  border-radius: 999px 999px 0 0;
+  border: 3px solid rgba(255, 102, 204, 0.5);
+  box-shadow: 0 12px 24px rgba(255, 102, 204, 0.28),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+  border-bottom: none;
+  line-height: 1.2;
+}
+
+.my-view-frame {
+  width: min(100%, 540px);
+  aspect-ratio: 3 / 1.5;
+  border-radius: 0 0 28px 28px;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 225, 244, 0.75)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 102, 204, 0.12),
+      rgba(255, 102, 204, 0.12) 14px,
+      transparent 14px,
+      transparent 28px
+    );
+  border: 4px solid rgba(255, 102, 204, 0.4);
+  border-top-width: 3px;
+  box-shadow: 0 25px 55px rgba(199, 75, 150, 0.15),
+    inset 0 0 0 3px rgba(255, 255, 255, 0.9);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-view-frame::after {
+  content: "image coming soon";
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: rgba(43, 11, 35, 0.5);
+}
+
+@media (max-width: 980px) {
+  .site-shell {
+    flex-direction: column;
+    max-width: 92vw;
+    padding: clamp(14px, 4vw, 24px);
+  }
+
+  .retro-sidebar {
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .main-nav button {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .site-stage {
+    padding: clamp(16px, 4vw, 24px);
+  }
+
+  .image-gallery {
+    width: clamp(100px, 12vw, 160px);
+    right: clamp(12px, 2vw, 24px);
+    top: clamp(60px, 12vh, 100px);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .site-shell {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .retro-sidebar {
+    padding: 22px 14px 26px;
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-toggle::after {
+    content: "☰";
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    display: none;
+    margin-top: 6px;
+  }
+
+  .retro-sidebar.nav-open .main-nav {
+    display: flex;
+  }
+
+  .retro-sidebar.nav-open .nav-toggle {
+    box-shadow: inset 0 -2px 6px rgba(255, 102, 204, 0.45),
+      0 12px 20px rgba(255, 102, 204, 0.3);
+  }
+
+  .main-nav button {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .page {
+    padding: 28px 18px;
+  }
+
+  .my-view-block {
+    transform: scale(1.1);
+    right: clamp(8px, 2vw, 16px);
+    bottom: clamp(8px, 2vw, 16px);
+    max-width: 260px;
+  }
+
+  .my-view-frame {
+    width: min(100%, 320px);
+    border-radius: 0 0 20px 20px;
+  }
+
+  .my-view-label {
+    font-size: 1.1rem;
+    padding: 1px 20px;
+    line-height: 1.2;
+  }
+
+  .image-gallery {
+    display: none;
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  .site-shell {
+    min-height: 100dvh;
+  }
+
+  .site-stage,
+  .page {
+    min-height: 60vh;
+  }
+
+  .my-view-block {
+    transform: scale(0.95);
+    right: clamp(8px, 2vw, 16px);
+    bottom: clamp(8px, 2vw, 16px);
+  }
+}
+
+/* === Bobby theme overrides (appended) === */
+/* Use Bobby portrait in the main header/frame */
+.my-view-frame { 
+  background-image: url('assets/bobby_portrait.png');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.95) contrast(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* Make page main content wider and centered on all HTML pages */
+.site-shell, .content-wrap, .page, .site-stage { 
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 92% !important;
+}
+
+/* Slight tint and accent for Bobby theme */
+:root { --pink: #d94fa8; --accent: #ff7ac9; --bg-tint: linear-gradient(180deg, rgba(255,240,248,0.6), rgba(255, 245, 250, 0.6)); }
+
+/* Add small Bobby badge */
+.header-badge::after { content: 'Bobby v1.0'; display:inline-block; background:rgba(255,255,255,0.85); color:#b3006b; padding:4px 8px; border-radius:8px; margin-left:8px; font-weight:800; font-size:12px; border:2px solid rgba(179,0,107,0.06); }
+
+/* Make images and thumbs slightly rounded like his view */
+.thumb, img { border-radius:12px; }
+
+/* Ensure poem monospace stands out */
+.poem pre { font-family: 'Courier New', monospace; color:#4b1844; background: rgba(255,250,255,0.6); padding:12px; border-radius:8px; }
+
+/* Accessibility: ensure centered main on small screens too */
+@media (max-width: 700px) {
+  .site-shell, .content-wrap, .page, .site-stage { width: 96% !important; padding: 12px !important; }
+}
+
+/* Appended Bobby theme tweaks: widen center and portrait */
+.main, .content, .page, #main { max-width:1100px !important; margin-left:auto !important; margin-right:auto !important; }
+.bobby-portrait{ width:140px; height:140px; border-radius:12px; }

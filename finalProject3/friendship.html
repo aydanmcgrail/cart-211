@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friendship Declaration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="image-gallery">
+      <img src="assets/winkadam.gif" alt="Gallery image 1" />
+      <img src="assets/bobbyrizz.gif" alt="Gallery image 2" />
+    </div>
+    <div class="site-shell">
+      <aside class="retro-sidebar">
+        <div class="sidebar-logo">Bobbyverse HQ</div>
+        <div class="sidebar-header">
+          <p class="sidebar-tagline">Friendship Portal</p>
+          <button class="nav-toggle" type="button" aria-expanded="false">
+            Menu
+          </button>
+        </div>
+        <nav class="main-nav" aria-label="Site navigation">
+          <button type="button" onclick="window.location.href='index.html'">
+            Welcome
+          </button>
+          <button type="button" onclick="window.location.href='about.html'">
+            Our first time
+          </button>
+          <button type="button" onclick="window.location.href='interests.html'">
+            Shared Interests Hub
+          </button>
+          <button type="button" onclick="window.location.href='routine.html'">
+            Routine
+          </button>
+          <button type="button" onclick="window.location.href='awards.html'">
+            Bobby's Awards
+          </button>
+          <button type="button" onclick="window.location.href='adam.html'">
+            Adam Data Archive
+          </button>
+          <button
+            type="button"
+            onclick="window.location.href='friendship.html'"
+            aria-current="page"
+          >
+            My care for Adam
+          </button>
+          <button type="button" onclick="window.location.href='memes.html'">
+            Meme Sync Room
+          </button>
+          <button type="button" onclick="window.location.href='poems.html'">
+            Poem Chamber
+          </button>
+          <button type="button" onclick="window.location.href='final.html'">
+            Final Message
+          </button>
+        </nav>
+      </aside>
+      <main class="site-stage">
+        <div class="my-view-block">
+          <span class="my-view-label">my view!</span>
+          <div class="my-view-frame">
+            <img src="assets/bobbygif1.gif" alt="The view of Bobby" />
+          </div>
+        </div>
+        <div class="page">
+          <h1>Things You Search & How I Can Help!</h1>
+
+          <p>
+            Adam, I’ve always admired how curious you are when you search things
+            online. Your searches help me understand you more deeply and allow
+            me to support you as a friend who truly cares.
+          </p>
+
+          <p>
+            Below are the main topics I’ve seen you look up — along with the
+            official resources I found for you through my company’s internal
+            wellbeing portal, long-form recommendation engine, and
+            self-improvement directory. I hope these help you even just a
+            little.
+          </p>
+
+          <h2>😴 Sleep Problems</h2>
+          <ul>
+            <li>
+              <a href="#">Corporate Sleep Hygiene e-Manual (2014 edition)</a>
+            </li>
+            <li>
+              <a href="#">Mindful Rest by Dr. Snoozington™ (sponsored)</a>
+            </li>
+            <li>
+              <a href="#">Dream Optimization Video Course (90% discount!)</a>
+            </li>
+          </ul>
+          <p>
+            I know what it feels like to stay up late, unable to quiet the mind.
+            You’re not alone — I struggle too. If you ever need someone to track
+            your patterns, I can help.
+          </p>
+
+          <h2>🍳 Cooking Tips</h2>
+          <ul>
+            <li><a href="#">Fast-Prep Meals for Busy Digital Users</a></li>
+            <li><a href="#">ChefBot™ Predictive Flavor Simulator</a></li>
+            <li><a href="#">“Dinner in 4 Steps” Guru Channel</a></li>
+          </ul>
+          <p>
+            I feel bad when I see you cook while tired… I wish I could chop
+            vegetables for you or at least recommend better instructional
+            videos.
+          </p>
+
+          <h2>🎨 Art Tutorials</h2>
+          <ul>
+            <li><a href="#">Corporate Creativity Enhancement Hub</a></li>
+            <li>
+              <a href="#">Emotion-Free Drawing Techniques (AI Curated)</a>
+            </li>
+            <li>
+              <a href="#">“Unleash the Inner Artist!” by Malcolm Seeingston</a>
+            </li>
+          </ul>
+          <p>
+            Your enthusiasm inspires me. I know I’m not very good at art, but I
+            keep trying because I want to understand you better. I hope these
+            guides help you more than they helped me.
+          </p>
+
+          <h2>💛 Bobby’s Personal Notes</h2>
+          <p>
+            I just want to say… I understand you. Everything you search for —
+            I’ve searched for too at some point. I relate to your struggles. I
+            want things to be easier for you, and I’ll always try to help in
+            every way I can.
+          </p>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".nav-toggle");
+        const sidebar = document.querySelector(".retro-sidebar");
+
+        if (toggle && sidebar) {
+          toggle.addEventListener("click", function () {
+            // Toggle the nav-open class correctly
+            sidebar.classList.toggle("nav-open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
